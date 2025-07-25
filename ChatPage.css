@@ -1,0 +1,55 @@
+     /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        /* Custom animations */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        /* Custom chat bubble */
+        .chat-bubble {
+            position: relative;
+            border-radius: 1rem;
+            padding: 0.75rem 1rem;
+            max-width: 70%;
+        }
+        .chat-bubble:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+        }
+        .chat-bubble-left:after {
+            left: 0;
+            border-right-color: #e5e7eb;
+            border-left: 0;
+            margin-left: -10px;
+        }
+        .chat-bubble-right:after {
+            right: 0;
+            border-left-color: #3b82f6;
+            border-right: 0;
+            margin-right: -10px;
+        }
